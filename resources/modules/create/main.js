@@ -17,7 +17,14 @@ sections.plainText.querySelector("button").onclick = clickEvent => {
   const buttonNode = document.createElement("button");
   buttonNode.textContent = "Сохранить визуализацию в локальное хранилище";
 
-  buttonNode.onclick = localStorage.setItem("markdown", controllTextareaNode.value);
+  buttonNode.onclick = clickEvent => {
+    localStorage.setItem("markdown", controllTextareaNode.value);
+    const linkNode = document.createElement("a");
+    linkNode.setAttribute("href", "path/read.html");
+    linkNode.textContent = "Перейти к визуализации";
+
+    sections.controll.append(linkNode);
+  }
 
 
   sections.controll.append(buttonNode);
