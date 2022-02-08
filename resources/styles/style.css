@@ -5,4 +5,5 @@
 
 body {
   min-height: 100vh;
+  white-space: pre-line;
 }
