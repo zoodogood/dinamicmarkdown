@@ -17,6 +17,8 @@ sections.plainText.querySelector("button").onclick = clickEvent => {
   const buttonNode = document.createElement("button");
   buttonNode.textContent = "Сохранить визуализацию в локальное хранилище";
 
+  buttonNode.onclick = localStorage.setItem("markdown", controllTextareaNode.value);
+
 
   sections.controll.append(buttonNode);
 };
@@ -25,7 +27,7 @@ sections.plainText.querySelector("button").onclick = clickEvent => {
 function placePointers( content ){
   const POINTERS = {
     "\\%":      /%/g,
-    
+
     "%p(350)":  /\,/g,
     "%p(800)":  /\./g,
     "%p(1050)": /\.\.\./g
