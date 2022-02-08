@@ -1,3 +1,5 @@
+let NO_ESCAPE = ``;
+
 class MarkdownParser {
   constructor(pointedContent){
     this.inner   = document.createElement("section");
@@ -6,19 +8,31 @@ class MarkdownParser {
   }
 
   parseNode(node){
-    console.log(node);
+    const marks = this.constructor.MARKS;
+    const container = [];
 
+    let reg = marks.map(({reg}) => `\\*?${ reg }`)
+      .join("|");
 
+    reg = new RegExp(reg, "g");
+
+    console.log(reg);
+    console.log([..."123**f**123".matchAll(reg)]);
+
+    node.innerHTML = "";
+    container.forEach(node.append);
   }
+
 
   toHTML(){
     return this.inner;
   }
 
+
   static MARKS = [
     {
       name: "bold",
-      reg: /[^\\]\*\*(.+?)[^\\]\*\*/g,
+      reg: `\\*\\*(.+?)[^\\\\]\\*\\*`,
       replacer: (full, group) => {
         const boldNode = document.createElement("b");
         boldNode.textContent = group;
@@ -28,3 +42,6 @@ class MarkdownParser {
     }
   ]
 }
+
+
+delete NO_ESCAPE;
