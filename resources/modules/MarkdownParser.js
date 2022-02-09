@@ -97,7 +97,7 @@ class MarkdownParser {
     const MUST_HAVE_LIST = [
       ["name", "string"],
       ["replacer", "function"],
-      ["reg": "string"]
+      ["reg", "string"]
     ];
 
     const errorsList = MUST_HAVE_LIST
