@@ -13,15 +13,12 @@ body {
 
   padding-top: 5vh;
   user-select: none;
-}
 
-#main_night {
   background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
 }
 
-#main_day {
-  background: linear-gradient(231deg, rgba(255,255,255,1) 50%, rgba(181,181,181,1) 100%) no-repeat;
-}
+
+
 
 button {
   display: block;
@@ -34,9 +31,6 @@ button {
   font-family: inherit;
 }
 
-#button_create {
-  margin: auto;
-}
 
 a {
   text-decoration: none;

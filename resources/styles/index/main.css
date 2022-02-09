@@ -32,8 +32,12 @@
 }
 
 
-body > button {
+body > a {
   display: inline-block;
-  min-width: 220px;
   margin: 15px;
+}
+
+body > a button {
+  width: 220px;
+  color: inherit;
 }

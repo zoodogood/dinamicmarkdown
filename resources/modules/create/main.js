@@ -9,13 +9,15 @@ sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
   const content = sections.plainText.querySelector("textarea").value;
   let controllNode = initTextarea(content);
 
-  sections.controll.querySelector("#divVisual")
-    .style.visibility = "visible";
+  sections.controll.querySelector("#textControll > button")
+    .style.display = "block";
+
 
 
   const buttonNode = sections.controll.querySelector(".buttonVisual")
 
   buttonNode.onclick = clickEvent => {
+    buttonNode.style.display = "none";
     localStorage.setItem("markdown", controllNode.value);
     initLink();
   }
@@ -57,6 +59,7 @@ function initLink(){
 
 
   button.textContent = "Перейти к визуализации";
+  button.className = "hasSuperBorder";
 
   node.setAttribute("href", "path/read.html");
   node.append(button);
