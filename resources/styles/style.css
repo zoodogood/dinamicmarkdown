@@ -30,10 +30,19 @@ q::before, q::after {
 }
 
 pre {
+  font-family: monospace;
   background: darkgray;
   padding: 2px;
   display: inline;
   border-radius: 2px;
+}
+
+code {
+  font-family: monospace;
+  display: block;
+  color: white;
+  background: gray;
+  padding: 20px;
 }
 
 textarea {

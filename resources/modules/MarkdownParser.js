@@ -32,8 +32,6 @@ class MarkdownParser {
       if (match.index){
         const substring = content.substring( 0, match.index );
         content = content.slice( match.index );
-        console.log(substring.length);
-        console.log(substring);
         this.#cleanPlain({ substring, container });
       }
 
@@ -196,7 +194,7 @@ class MarkdownParser {
     },
     {
       name: "code",
-      reg: `(?<!\\\\)\`(.+?)\``,
+      reg: `(?<!\\\\)\`([^\`\n]+?)\``,
       replacer: (content) => {
         const node = document.createElement("pre");
         node.className = "no-parse";
@@ -221,6 +219,22 @@ class MarkdownParser {
       replacer: (content) => {
         const node = document.createElement("i");
         node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "codeblock",
+      reg: `(?<!\\\\)\`\`\`([a-zA-Z]+?\\n)?([^\`]+?)\`\`\``,
+      replacer: (content, {groups}) => {
+        const node = document.createElement("code");
+        node.className = "no-parse";
+        node.textContent = content;
+
+        const lang = groups.codeblock.match(/(?<=```)[a-zA-Z]+?(?=\n)/);
+        if (lang)
+          hljs.highlightElement(node);
+
         return node;
       }
 
