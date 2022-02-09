@@ -31,8 +31,9 @@ class MarkdownParser {
 
 
       if (match.index){
-        container.push(content.substring( 0, match.index ));
+        const substring = content.substring( 0, match.index );
         content = content.slice( match.index );
+        this.#cleanPlain({ substring, container });
       }
       content = content.replace(match[0], "");
 
@@ -69,6 +70,29 @@ class MarkdownParser {
 
     return this.constructor.MARKS.find(mark => mark.name === groupName);
   }
+
+
+
+  #cleanPlain({ substring, container }){
+
+    while (true) {
+      const index = substring.indexOf("\\");
+      if (!~index)
+        break;
+
+      substring = substring.substring(index + 1);
+      container.push(substring.slice(0, index));
+
+      const node = document.createElement("span");
+      node.className = "escaping no-parse no-visible";
+      node.textContent = "\\";
+      container.push(node);
+    }
+
+    if (substring)
+      container.push(substring);
+  }
+
 
 
 
@@ -185,6 +209,32 @@ class MarkdownParser {
       replacer: (content) => {
         const node = document.createElement("i");
         node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "code",
+      reg: `(?<!\\\\)\`([^\`\n]+?)\``,
+      replacer: (content) => {
+        const node = document.createElement("pre");
+        node.className = "no-parse";
+        node.textContent = content;
+        return node;
+      }
+    },
+    {
+      name: "codeblock",
+      reg: `(?<!\\\\)\`\`\`([a-zA-Z]+?\\n)?([^\`]+?)\`\`\``,
+      replacer: (content, {groups}) => {
+        const node = document.createElement("code");
+        node.className = "no-parse";
+        node.textContent = content;
+
+        const lang = groups.codeblock.match(/(?<=```)[a-zA-Z]+?(?=\n)/);
+        if (lang)
+          hljs.highlightElement(node);
+
         return node;
       }
 

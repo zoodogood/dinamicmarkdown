@@ -1,4 +1,10 @@
 body > section {
   width: 70vw;
   font-size: 1.1em;
+  user-select: text;
+}
+
+
+section code {
+  width: 80%;
 }
