@@ -4,31 +4,24 @@ const sections = {
 };
 
 
+
 sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
-  const plainContent = sections.plainText.querySelector("textarea").value;
+  const content = sections.plainText.querySelector("textarea").value;
+  let controllNode = initTextarea(content);
 
-  if (!plainContent)
-    throw new Error("b");
+  sections.controll.querySelector("#divVisual")
+    .style.visibility = "visible";
 
-  const controllTextareaNode = sections.controll.querySelector("textarea");
-  controllTextareaNode.removeAttribute("disabled");
-  controllTextareaNode.value = placePointers( plainContent );
-  
-  const divNode = sections.controll.querySelector("#divVisual")
-
-  divNode.style.visibility = divNode.style.visibility !== "hidden" ? "hidden" : "visible";
 
   const buttonNode = sections.controll.querySelector(".buttonVisual")
 
   buttonNode.onclick = clickEvent => {
-    localStorage.setItem("markdown", controllTextareaNode.value);
-    const linkNode = document.createElement("a");
-    linkNode.setAttribute("href", "path/read.html");
-    linkNode.textContent = "Перейти к визуализации";
-
-    sections.controll.append(linkNode);
+    localStorage.setItem("markdown", controllNode.value);
+    initLink();
   }
 };
+
+
 
 
 function placePointers( content ){
@@ -44,4 +37,29 @@ function placePointers( content ){
 
   Object.entries( POINTERS ).forEach(replacer);
   return content;
+}
+
+
+
+function initTextarea(content){
+  const node = sections.controll.querySelector("textarea");
+  node.removeAttribute("disabled");
+  node.value = placePointers( content );
+
+  return node;
+}
+
+
+function initLink(){
+
+  const node = document.createElement("a");
+  const button = document.createElement("button");
+
+
+  button.textContent = "Перейти к визуализации";
+
+  node.setAttribute("href", "path/read.html");
+  node.append(button);
+
+  sections.controll.append(node);
 }

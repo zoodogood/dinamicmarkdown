@@ -7,7 +7,6 @@
 
 body {
   min-height: 100vh;
-  white-space: pre-line;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,9 +45,6 @@ a {
   border-bottom-color: rgba(15, 122, 252, 0.2);
 }
 
-a:hover{
-  color:#cf0000;
-  }
 
 header {
   background: rgba(66,70,71,0.4);
@@ -96,50 +92,47 @@ textarea {
 
 
 
-.main_div {
+.hasSuperBorder {
   --color: #3992e6;
   position: relative;
-  z-index: 1;
 }
 
-.main_div::before {
+
+
+.hasSuperBorder::before, .hasSuperBorder::after {
   content: '';
   position: absolute;
   width: 30px;
   height: 30px;
   background: transparent;
+
+  z-index: -5;
+  transition: 0.5s;
+}
+
+.hasSuperBorder:hover::before, .hasSuperBorder:hover::after  {
+  width: 100%;
+  height: 100%;
+
+  --color: transparent;
+}
+
+
+.hasSuperBorder::before {
   top: -7px;
   left: -7px;
-  z-index: -5;
+
   border-top: 3px solid var(--color);
   border-left: 3px solid var(--color);
-  transition: 0.5s;
 }
 
-.main_div::after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: transparent;
+.hasSuperBorder::after {
   bottom: -7px;
   right: -7px;
-  z-index: -5;
+
   border-right: 3px solid var(--color);
   border-bottom: 3px solid var(--color);
-  transition: 0.5s;
 }
-
-.main_div:hover::before {
-  width: 100%;
-  height: 100%;
-}
-
-.main_div:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
 
 
 .no-visible {
