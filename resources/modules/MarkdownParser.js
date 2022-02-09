@@ -16,7 +16,9 @@ class MarkdownParser {
 
     let content = node.textContent;
 
-    let reg = marks.map(({ reg, name }) => `(?<${ name }>${ reg })`).join("|");
+    let reg = marks.map(({ reg, name: groupName }) => `(?<${ groupName }>${ reg })`)
+      .join("|");
+
     reg = new RegExp(reg);
 
     while (true){
@@ -45,7 +47,7 @@ class MarkdownParser {
 
     container.push(content);
     node.innerHTML = "";
-    
+
     container.forEach(item => node.append(item));
     return node;
   }
@@ -67,7 +69,7 @@ class MarkdownParser {
   static MARKS = [
     {
       name: "escaping",
-      reg: `\\\\`,
+      reg: `\\\\\\\\`,
       replacer: (content) => {
         const node = document.createElement("span");
         node.className = "escaping no-parse";
