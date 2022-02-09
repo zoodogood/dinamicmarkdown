@@ -13,11 +13,47 @@ a button {
 
 
 
-
 #textControll button {
   width: fit-content;
 }
 
 #textControll > button {
   display: none;
+}
+
+#pointedList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pointedList li{
+  width: 100%;
+  clear:left;  
+  overflow: hidden;
+  color: #0f7afc;
+}
+
+#pointedList li span{
+  display: block;
+  float: left;  
+  min-width: 0px;  
+  margin-bottom: 3px;
+  padding: 10px;
+  color: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
+}
+
+#pointedList li:hover span {
+  color: #f1efef;
+  cursor: pointer;
+  background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
+  border-left: 10px solid linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
+  min-width: 100%;
+  -webkit-box-shadow: 0 0 5px #807b7b;
+  -moz-box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 5px #716d6d;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
