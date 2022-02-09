@@ -37,7 +37,7 @@ class MarkdownParser {
       const innerContent = match.filter(Boolean).at(-1);
       const {replacer} = this.#fetchMark(match.groups);
 
-      let parsed = replacer(innerContent);
+      let parsed = replacer(innerContent, match);
 
       if (parsed instanceof HTMLElement)
         this.parseNode(parsed);
@@ -89,4 +89,24 @@ class MarkdownParser {
 
     }
   ]
+
+  static addMark(mark){
+    if (typeof mark !== "object")
+      throw new Error("must be Object");
+
+    const MUST_HAVE_LIST = [
+      ["name", "string"],
+      ["replacer", "function"],
+      ["reg": "string"]
+    ];
+
+    const errorsList = MUST_HAVE_LIST
+      .filter(([property, type]) => !(property in mark) || typeof mark[property] !== type)
+      .map(([property, type]) => `mark must have the ${ property } (${ type })`);
+
+    if (errorsList.length)
+      throw new Error(errorsList.join(" & "));
+
+    this.MARKS.push(mark);
+  }
 }
