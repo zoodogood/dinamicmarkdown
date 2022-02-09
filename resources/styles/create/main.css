@@ -21,6 +21,46 @@ a button {
   display: none;
 }
 
+#buttonCreate {
+ width: 100%; 
+ padding: 15px 25px;
+ border: unset;
+ z-index: 1;
+ color: black;
+ background: #D8D8D8;
+ border-radius: 0 0 10px 10px;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+#buttonCreate::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 1500ms
+}
+
+#buttonCreate:hover {
+ color: #e8e8e8;
+}
+
+#buttonCreate:hover::before {
+ width: 100%;
+}
+
+
 #pointedList {
   margin: 0;
   padding: 0;
