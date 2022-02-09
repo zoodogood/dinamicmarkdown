@@ -38,6 +38,7 @@ pre {
 }
 
 code {
+  white-space: pre-wrap;
   font-family: monospace;
   display: block;
   color: white;
