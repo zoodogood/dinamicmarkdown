@@ -29,11 +29,16 @@ class MarkdownParser {
         break;
 
 
-
       if (match.index){
-        container.push(content.substring( 0, match.index ));
+        const substring = content.substring( 0, match.index );
         content = content.slice( match.index );
+        console.log(substring.length);
+        console.log(substring);
+        this.#cleanPlain({ substring, container });
       }
+
+
+
       content = content.replace(match[0], "");
 
       const innerContent = match.filter(Boolean).at(-1);
@@ -61,6 +66,27 @@ class MarkdownParser {
   }
 
 
+  #cleanPlain({ substring, container }){
+
+    while (true) {
+      const index = substring.indexOf("\\");
+      if (!~index)
+        break;
+
+      substring = substring.substring(index + 1);
+      container.push(substring.slice(0, index));
+
+      const node = document.createElement("span");
+      node.className = "escaping no-parse no-visible";
+      node.textContent = "\\";
+      container.push(node);
+    }
+
+    if (substring)
+      container.push(substring);
+  }
+
+
 
   #fetchMark(groups){
     const groupName = Object.entries(groups)
@@ -69,7 +95,6 @@ class MarkdownParser {
 
     return this.constructor.MARKS.find(mark => mark.name === groupName);
   }
-
 
 
   static MARKS = [
