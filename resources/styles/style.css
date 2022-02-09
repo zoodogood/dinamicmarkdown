@@ -13,6 +13,7 @@ body {
   align-items: center;
 
   padding-top: 5vh;
+  user-select: none;
 }
 
 button {
