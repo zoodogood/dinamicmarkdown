@@ -7,6 +7,8 @@ class MarkdownParser {
     this.parseNode( this.inner );
   }
 
+
+
   parseNode(node){
     if (node.classList.contains("no-parse"))
       return node;
@@ -19,7 +21,7 @@ class MarkdownParser {
     let reg = marks.map(({ reg, name: groupName }) => `(?<${ groupName }>${ reg })`)
       .join("|");
 
-    reg = new RegExp(reg);
+    reg = new RegExp( reg );
 
     while (true){
       const match = content.match(reg);
@@ -53,9 +55,12 @@ class MarkdownParser {
   }
 
 
+
   toHTML(){
     return this.inner;
   }
+
+
 
   #fetchMark(groups){
     const groupName = Object.entries(groups)
@@ -66,13 +71,89 @@ class MarkdownParser {
   }
 
 
+
   static MARKS = [
     {
       name: "escaping",
-      reg: `\\\\\\\\`,
-      replacer: (content) => {
+      reg: `(?<=\\\\)(\\\\)`,
+      replacer: (content, match) => {
         const node = document.createElement("span");
-        node.className = "escaping no-parse";
+        node.className = "escape no-parse";
+        node.textContent = "\\";
+        return node;
+      }
+
+    },
+    {
+      name: "escape_line",
+      reg: `\\\\n`,
+      replacer: (content) => "\n"
+    },
+    {
+      name: "h1",
+      reg: `(?:\\n|^)(?<!\\\\)#\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h1");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "h2",
+      reg: `(?:\\n|^)(?<!\\\\)#{2}\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h2");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "h3",
+      reg: `(?:\\n|^)(?<!\\\\)#{3}\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h3");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "h4",
+      reg: `(?:\\n|^)(?<!\\\\)#{4}\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h4");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "h5",
+      reg: `(?:\\n|^)(?<!\\\\)#{5}\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h5");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "h6",
+      reg: `(?:\\n|^)(?<!\\\\)#{6}\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("h6");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "quote",
+      reg: `(?:\\n|^)(?<!\\\\)\\>\\s(.+?)(?:\\n|$)`,
+      replacer: (content) => {
+        const node = document.createElement("q");
         node.textContent = content;
         return node;
       }
@@ -83,6 +164,26 @@ class MarkdownParser {
       reg: `(?<!\\\\)\\*\\*(.+?)(?<!\\\\)\\*\\*`,
       replacer: (content) => {
         const node = document.createElement("b");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "italic",
+      reg: `(?<!\\\\)\\*(.+?)(?<!\\\\)\\*`,
+      replacer: (content) => {
+        const node = document.createElement("i");
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
+      name: "italic2",
+      reg: `(?<!\\\\)_(.+?)(?<!\\\\)_`,
+      replacer: (content) => {
+        const node = document.createElement("i");
         node.textContent = content;
         return node;
       }
