@@ -195,6 +195,17 @@ class MarkdownParser {
 
     },
     {
+      name: "code",
+      reg: `(?<!\\\\)\`(.+?)\``,
+      replacer: (content) => {
+        const node = document.createElement("pre");
+        node.className = "no-parse";
+        node.textContent = content;
+        return node;
+      }
+
+    },
+    {
       name: "italic",
       reg: `(?<!\\\\)\\*(.+?)(?<!\\\\)\\*`,
       replacer: (content) => {
