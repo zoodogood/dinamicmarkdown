@@ -94,91 +94,40 @@ textarea {
   padding: 2px;
 }
 
-#title_header {
-  background-repeat:repeat-x;
-  background-position:0 0;
-  font-size:800%;
-  text-transform:uppercase;
-  text-align:center;
-  font-family:'Luckiest Guy';
-  color:transparent;
-  text-shadow: rgba(255, 244, 0, 0.3) 3px 0 0;
-  -webkit-font-smoothing:antialiased;
-  -webkit-background-clip:text;
-  -moz-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin:0;
-  -webkit-animation:BackgroundAnimated 15s linear infinite;
-  -moz-animation:BackgroundAnimated 15s linear infinite;
-  -ms-animation:BackgroundAnimated 15s linear infinite;
-  -o-animation:BackgroundAnimated 15s linear infinite;
-  animation:BackgroundAnimated 15s linear infinite;
-}
-    @keyframes BackgroundAnimated {
-    from {
-        background-position:0 0
-    }
-    to {
-        background-position:100% 0
-    }
-}
-    @-webkit-keyframes BackgroundAnimated {
-    from {
-        background-position:0 0
-    }
-    to {
-        background-position:100% 0
-    }
-}
-    @-ms-keyframes BackgroundAnimated {<     from {
-        background-position:0 0
-    }
-    to {
-        background-position:100% 0
-    }
-}
-    @-moz-keyframes BackgroundAnimated {
-    from {
-        background-position:0 0
-    }
-    to {
-        background-position:100% 0
-    }
-}
+
 
 .main_div {
- --color: #3992e6;
- position: relative;
- z-index: 1;
+  --color: #3992e6;
+  position: relative;
+  z-index: 1;
 }
 
 .main_div::before {
- content: '';
- position: absolute;
- width: 30px;
- height: 30px;
- background: transparent;
- top: -7px;
- left: -7px;
- z-index: -5;
- border-top: 3px solid var(--color);
- border-left: 3px solid var(--color);
- transition: 0.5s;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  top: -7px;
+  left: -7px;
+  z-index: -5;
+  border-top: 3px solid var(--color);
+  border-left: 3px solid var(--color);
+  transition: 0.5s;
 }
 
 .main_div::after {
- content: '';
- position: absolute;
- width: 30px;
- height: 30px;
- background: transparent;
- bottom: -7px;
- right: -7px;
- z-index: -5;
- border-right: 3px solid var(--color);
- border-bottom: 3px solid var(--color);
- transition: 0.5s;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  bottom: -7px;
+  right: -7px;
+  z-index: -5;
+  border-right: 3px solid var(--color);
+  border-bottom: 3px solid var(--color);
+  transition: 0.5s;
 }
 
 .main_div:hover::before {
