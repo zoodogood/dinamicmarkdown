@@ -8,19 +8,34 @@
     <title>Создайте текст</title>
     <link rel="stylesheet" href="resources/styles/style.css">
   </head>
-  <body>
+
+  <style>
+    #divVisual {
+      visibility: hidden;
+    }
+  </style>
+
+  <body id="main_night">
     <section id = "plainText">
       <textarea placeholder = "Чистый текст" name = "name" rows = "8" cols = "80"></textarea>
-      <button>Click me</button>
+      <br/>
+      <div class = "main_div">
+        <button id = "button_create", class = "buttonOpen">Click me</button>
+      </div>
     </section>
 
     <section id = "textControll">
-      %p(ms) — пауза
-      %c — очистить текст
-      Вы можете использовать Markdown
+      <span id = "defolt_text">
+        %p(ms) — пауза
+        %c — очистить текст
+        Вы можете использовать Markdown
+      </span>
       <textarea disabled placeholder = "Сначала заполните чистый текст и нажмите кнопку" name = "name" rows = "8" cols = "80"></textarea>
+      <br/>
+      <div class = "main_div", id = "divVisual">
+        <button id = "button_create", class = "buttonVisual">Сохранить визуализацию в локальное хранилище</button>
+      </div>
     </section>
-
 
   </body>
   <script src="resources/modules/create/main.js" charset="utf-8"></script>

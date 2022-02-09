@@ -4,7 +4,7 @@ const sections = {
 };
 
 
-sections.plainText.querySelector("button").onclick = clickEvent => {
+sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
   const plainContent = sections.plainText.querySelector("textarea").value;
 
   if (!plainContent)
@@ -13,9 +13,12 @@ sections.plainText.querySelector("button").onclick = clickEvent => {
   const controllTextareaNode = sections.controll.querySelector("textarea");
   controllTextareaNode.removeAttribute("disabled");
   controllTextareaNode.value = placePointers( plainContent );
+  
+  const divNode = sections.controll.querySelector("#divVisual")
 
-  const buttonNode = document.createElement("button");
-  buttonNode.textContent = "Сохранить визуализацию в локальное хранилище";
+  divNode.style.visibility = divNode.style.visibility !== "hidden" ? "hidden" : "visible";
+
+  const buttonNode = sections.controll.querySelector(".buttonVisual")
 
   buttonNode.onclick = clickEvent => {
     localStorage.setItem("markdown", controllTextareaNode.value);
@@ -25,9 +28,6 @@ sections.plainText.querySelector("button").onclick = clickEvent => {
 
     sections.controll.append(linkNode);
   }
-
-
-  sections.controll.append(buttonNode);
 };
 
 

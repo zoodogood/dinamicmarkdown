@@ -13,11 +13,45 @@ body {
   align-items: center;
 
   padding-top: 5vh;
-  user-select: none;
+}
+
+#main_night {
+    background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
+}
+
+#main_day {
+    background: linear-gradient(231deg, rgba(255,255,255,1) 50%, rgba(181,181,181,1) 100%) no-repeat;
 }
 
 button {
   display: block;
+}
+
+#button_create {
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #0f7afc;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(15, 122, 252, 0.2);
+}
+
+a:hover{
+  color:#cf0000;
+  }
+
+header {
+  background: rgba(66,70,71,0.4);
+  box-shadow: 0px 15px 27px -13px rgba(0, 0, 0, 0.77);
+  width: 100%;
+  border-radius: 30px;
+}
+
+header:hover {
+  border-radius: 20px;
+  box-shadow: 0px 15px 27px -10px rgba(0, 0, 0, 0.77);
 }
 
 q {
@@ -52,6 +86,112 @@ textarea {
   padding: 2px;
 }
 
+#title_header {
+  background-repeat:repeat-x;
+  background-position:0 0;
+  font-size:800%;
+  text-transform:uppercase;
+  text-align:center;
+  font-family:'Luckiest Guy';
+  color:transparent;
+  text-shadow: rgba(255, 244, 0, 0.3) 3px 0 0;
+  -webkit-font-smoothing:antialiased;
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin:0;
+  -webkit-animation:BackgroundAnimated 15s linear infinite;
+  -moz-animation:BackgroundAnimated 15s linear infinite;
+  -ms-animation:BackgroundAnimated 15s linear infinite;
+  -o-animation:BackgroundAnimated 15s linear infinite;
+  animation:BackgroundAnimated 15s linear infinite;
+}
+    @keyframes BackgroundAnimated {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+}
+    @-webkit-keyframes BackgroundAnimated {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+}
+    @-ms-keyframes BackgroundAnimated {<     from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+}
+    @-moz-keyframes BackgroundAnimated {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+}
+
+.main_div {
+ --color: #3992e6;
+ position: relative;
+ z-index: 1;
+}
+
+.main_div::before {
+ content: '';
+ position: absolute;
+ width: 30px;
+ height: 30px;
+ background: transparent;
+ top: -7px;
+ left: -7px;
+ z-index: -5;
+ border-top: 3px solid var(--color);
+ border-left: 3px solid var(--color);
+ transition: 0.5s;
+}
+
+.main_div::after {
+ content: '';
+ position: absolute;
+ width: 30px;
+ height: 30px;
+ background: transparent;
+ bottom: -7px;
+ right: -7px;
+ z-index: -5;
+ border-right: 3px solid var(--color);
+ border-bottom: 3px solid var(--color);
+ transition: 0.5s;
+}
+
+.main_div:hover::before {
+ width: 100%;
+ height: 100%;
+}
+
+.main_div:hover::after {
+ width: 100%;
+ height: 100%;
+}
+
+.main_div button {
+ padding: 0.7em 2em;
+ font-size: 16px;
+ background: #222222;
+ color: #fff;
+ border: none;
+ cursor: pointer;
+ font-family: inherit;
+}
 
 
 .no-visible {
