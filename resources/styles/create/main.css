@@ -4,21 +4,11 @@ section {
   flex-direction: column;
 }
 
-
-
 a button {
   font-size: 0.8em;
+  margin: auto;
   margin-top: 20px;
-}
 
-
-
-#textControll button {
-  width: fit-content;
-}
-
-#textControll > button {
-  display: none;
 }
 
 #buttonCreate {
