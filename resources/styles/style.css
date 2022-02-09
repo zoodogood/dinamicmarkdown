@@ -29,6 +29,13 @@ q::before, q::after {
   content: "";
 }
 
+pre {
+  background: darkgray;
+  padding: 2px;
+  display: inline;
+  border-radius: 2px;
+}
+
 textarea {
   white-space: pre-line;
   padding: 2px;
