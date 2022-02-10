@@ -1,4 +1,5 @@
 
+
 section {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@ a button {
 }
 
 #buttonCreate {
- width: 100%; 
+ width: 100%;
  padding: 15px 25px;
  border: unset;
  z-index: 1;
@@ -58,15 +59,15 @@ a button {
 
 #pointedList li{
   width: 100%;
-  clear:left;  
+  clear:left;
   overflow: hidden;
   color: #0f7afc;
 }
 
 #pointedList li span{
   display: block;
-  float: left;  
-  min-width: 0px;  
+  float: left;
+  min-width: 0px;
   margin-bottom: 3px;
   padding: 10px;
   color: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
