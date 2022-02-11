@@ -1,4 +1,6 @@
-
+textarea {
+  margin-top: 15px;
+}
 
 section {
   display: flex;
@@ -9,6 +11,7 @@ a button {
   font-size: 0.8em;
   margin: auto;
   margin-top: 20px;
+  
 }
 
 #buttonCreate {
@@ -43,7 +46,7 @@ a button {
 }
 
 #buttonCreate:hover {
- color: #e8e8e8;
+ color: rgba(255,150,0,0.8);
 }
 
 #buttonCreate:hover::before {
@@ -52,7 +55,7 @@ a button {
 
 
 #pointedList {
-  margin: 0;
+  margin-top: 15px;
   padding: 0;
   list-style: none;
 }
@@ -61,7 +64,7 @@ a button {
   width: 100%;
   clear:left;
   overflow: hidden;
-  color: #0f7afc;
+  color: gray;
 }
 
 #pointedList li span{

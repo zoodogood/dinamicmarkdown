@@ -17,9 +17,6 @@ body {
   background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
 }
 
-
-
-
 button {
   display: block;
   padding: 0.7em 2em;
@@ -81,17 +78,26 @@ code {
 
 textarea {
   white-space: pre-line;
-  padding: 2px;
+  padding: 4px;
+  background: 
+          linear-gradient(to top, rgba(0,30,36,0.7) 50%, rgba(0,1,10,0.7) 100%),
+          url("../images/textareaFon.jpg") no-repeat;
+
+  border: 1px solid #888;
+  color: rgba(20,200,36,0.8);
+  background-size: 100% 100%;
 }
 
+textarea::placeholder {
+  color: gray;
+  opacity: 0.7;
+}
 
 
 .hasSuperBorder {
   --color: #3992e6;
   position: relative;
 }
-
-
 
 .hasSuperBorder::before, .hasSuperBorder::after {
   content: '';
