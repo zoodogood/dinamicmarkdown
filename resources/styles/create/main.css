@@ -11,7 +11,6 @@ a button {
   font-size: 0.8em;
   margin: auto;
   margin-top: 20px;
-  
 }
 
 #buttonCreate {
@@ -20,7 +19,7 @@ a button {
  border: unset;
  z-index: 1;
  color: black;
- background: #D8D8D8;
+ background: gray;
  border-radius: 0 0 10px 10px;
  position: relative;
  font-weight: 1000;
@@ -47,6 +46,8 @@ a button {
 
 #buttonCreate:hover {
  color: rgba(255,150,0,0.8);
+ -webkit-box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
+ box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
 }
 
 #buttonCreate:hover::before {
@@ -58,6 +59,7 @@ a button {
   margin-top: 15px;
   padding: 0;
   list-style: none;
+
 }
 
 #pointedList li{
@@ -77,16 +79,13 @@ a button {
 }
 
 #pointedList li:hover span {
-  color: #f1efef;
+  color: rgba(255,150,0,0.8);
   cursor: pointer;
-  background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
-  border-left: 10px solid linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
+  border-radius: 0;
+  background: #212121 no-repeat;
   min-width: 100%;
-  -webkit-box-shadow: 0 0 5px #807b7b;
-  -moz-box-shadow: 0 0 5px gray;
-  box-shadow: 0 0 5px #716d6d;
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
+}
+
+#pointedList li:hover #upSpan {
+  border-radius: 10px 10px 0 0;
 }
