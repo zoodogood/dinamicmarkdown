@@ -3,8 +3,6 @@ const sections = {
   "controll":  document.getElementById("textControll")
 };
 
-
-
 sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
   const content = sections.plainText.querySelector("textarea").value;
   let controllNode = initTextarea(content);

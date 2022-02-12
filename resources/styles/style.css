@@ -79,22 +79,6 @@ code {
 textarea {
   white-space: pre-line;
   padding: 4px;
-  background: 
-          linear-gradient(to top, rgba(0,30,36,0.7) 50%, rgba(0,1,10,0.7) 100%),
-          url("../images/textareaFon.jpg") no-repeat;
-  outline: none;
-  border: 1px solid #888;
-  color: rgba(255,150,0,0.8);
-  background-size: 100% 100%;
-}
-
-textarea:hover {
-  border: 1px solid rgba(255,150,0,0.8);
-}
-
-textarea::placeholder {
-  color: gray;
-  opacity: 0.7;
 }
 
 .hasSuperBorder {
@@ -139,6 +123,7 @@ textarea::placeholder {
 
 .hasSuperBorder:hover {
   animation: ButtonScale 5s;
+  animation-fill-mode:forwards
 }
 
 @keyframes ButtonScale {
@@ -149,6 +134,7 @@ textarea::placeholder {
     transform: scale(1.5);
     box-shadow: 0px 15px 27px -10px rgba(0, 0, 0, 0.77);
     border-radius: 5px;
+
   }
 }
 
