@@ -61,8 +61,8 @@ a button {
 
 #buttonCreate:hover {
  color: rgba(255,150,0,0.8);
- -webkit-box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
- box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
+ -webkit-box-shadow: -0.8px 4px 9px -5px rgba(255,150,0,0.8);
+ box-shadow: -0.8px 4px 9px -5px rgba(255,150,0,0.8);
 }
 
 #buttonCreate:hover::before {
@@ -112,7 +112,7 @@ a button {
 
 #pointedList li:hover span {
   color: rgba(255,150,0,0.8);
-  cursor: pointer;
+  cursor: default;
   border-radius: 0;
   background: #212121 no-repeat;
   min-width: 100%;

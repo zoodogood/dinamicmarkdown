@@ -78,7 +78,8 @@ code {
 
 textarea {
   white-space: pre-line;
-  padding: 4px;
+  padding: 7px;
+  resize: none;
 }
 
 .hasSuperBorder {
