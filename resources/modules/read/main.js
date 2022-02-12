@@ -11,5 +11,7 @@ document.body.innerHTML = "";
 
 
 
-const inner = new MarkdownParser(pointedContent).toHTML();
-document.body.append(inner);
+const inner = new MarkdownParser(pointedContent)
+  .toHTML();
+
+new Visualizer().visualize(inner);
