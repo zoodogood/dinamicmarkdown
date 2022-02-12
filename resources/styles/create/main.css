@@ -35,7 +35,7 @@ a button {
  z-index: 1;
  color: black;
  background: gray;
- border-radius: 0 0 10px 10px;
+ border-radius: 0;
  position: relative;
  font-weight: 1000;
  font-size: 17px;
@@ -92,11 +92,11 @@ a button {
   margin-top: 15px;
   padding: 0;
   list-style: none;
-  margin-left: 0em;
+  margin-left: 49px;
 }
 
 #pointedList li{
-  width: 31em;
+  width: 91%;
   clear:left;
   color: gray;
 }
@@ -114,18 +114,16 @@ a button {
   color: rgba(255,150,0,0.8);
   cursor: pointer;
   border-radius: 0;
-  background: #212121 no-repeat 100%;
+  background: #212121 no-repeat;
   min-width: 100%;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   transform: scale(1.2);
+  -webkit-box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
+  box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
 }
 
-#pointedList li:hover #upSpan {
-  border-radius: 10px 10px 0 0;
-}
-
-#pointedList li:hover #downSpan {
-  border-radius: 0 0 10px 10px;
+#bg {
+  background: rgba(66,70,71,0.4);
 }

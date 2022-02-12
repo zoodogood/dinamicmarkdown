@@ -15,17 +15,17 @@
       <textarea placeholder = "Чистый текст" name = "name" rows = "8" cols = "80"></textarea>
       <button id = "buttonCreate" class = "buttonOpen">Click me</button>
     </section>
-
-    <ul id = "pointedList">
-      <li><span id = "upSpan">%p(ms) — пауза</span></li>
-      <li><span>%c — очистить текст</span></li>
-      <li><span id = "downSpan">Вы можете использовать Markdown</span></li>
-    </ul>
-    
+  <div id="bg">
     <section id = "textControll">
+      <ul id = "pointedList">
+        <li><span id = "upSpan">%p(ms) — пауза</span></li>
+        <li><span>%c — очистить текст</span></li>
+        <li><span id = "downSpan">Вы можете использовать Markdown</span></li>
+      </ul>
       <textarea disabled placeholder = "Сначала заполните чистый текст и нажмите кнопку" name = "name" rows = "8" cols = "80"></textarea>
       <button id = "buttonCreate" class = "buttonVisual">Сохранить визуализацию в локальное хранилище</button>
     </section>
+  </div>
 
   </body>
   <script src="resources/modules/create/main.js" charset="utf-8"></script>
