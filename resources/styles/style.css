@@ -97,7 +97,6 @@ textarea::placeholder {
   opacity: 0.7;
 }
 
-
 .hasSuperBorder {
   --color: #3992e6;
   position: relative;
@@ -138,6 +137,20 @@ textarea::placeholder {
   border-bottom: 3px solid var(--color);
 }
 
+.hasSuperBorder:hover {
+  animation: ButtonScale 5s;
+}
+
+@keyframes ButtonScale {
+  0% {
+    width: 220px;
+  }
+  100% {
+    transform: scale(1.5);
+    box-shadow: 0px 15px 27px -10px rgba(0, 0, 0, 0.77);
+    border-radius: 5px;
+  }
+}
 
 .no-visible {
   display: none;

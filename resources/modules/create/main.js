@@ -12,7 +12,7 @@ sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
   sections.controll.querySelector("#textControll > button")
     .style.display = "block";
 
-
+  document.querySelector("#buttonCreate").style.animation = "checkClick 1s";
 
   const buttonNode = sections.controll.querySelector(".buttonVisual")
 
@@ -22,9 +22,6 @@ sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
     initLink();
   }
 };
-
-
-
 
 function placePointers( content ){
   const POINTERS = {
