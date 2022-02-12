@@ -92,12 +92,12 @@ a button {
   margin-top: 15px;
   padding: 0;
   list-style: none;
+  margin-left: 0em;
 }
 
 #pointedList li{
-  width: 100%;
+  width: 31em;
   clear:left;
-  overflow: hidden;
   color: gray;
 }
 
@@ -114,10 +114,18 @@ a button {
   color: rgba(255,150,0,0.8);
   cursor: pointer;
   border-radius: 0;
-  background: #212121 no-repeat;
+  background: #212121 no-repeat 100%;
   min-width: 100%;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transform: scale(1.2);
 }
 
 #pointedList li:hover #upSpan {
   border-radius: 10px 10px 0 0;
+}
+
+#pointedList li:hover #downSpan {
+  border-radius: 0 0 10px 10px;
 }
