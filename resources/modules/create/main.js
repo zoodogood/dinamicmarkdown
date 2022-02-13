@@ -61,10 +61,3 @@ function initLink(){
 
   sections.controll.append(node);
 }
-
-if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1   
-  let dpt = window.devicePixelRatio;
-  let widthM = window.screen.width * dpt;
-  let widthH = window.screen.height * dpt;
-  document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
-}
