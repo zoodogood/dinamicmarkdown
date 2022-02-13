@@ -8,10 +8,6 @@ textarea {
   background-size: 100% 100%;
 }
 
-section {
-  width: 593px;
-}
-
 textarea:hover {
   background: 
       linear-gradient(to top, rgba(0,30,36,0.7) 50%, rgba(0,1,10,0.7) 100%),
@@ -23,6 +19,13 @@ textarea:hover {
 textarea::placeholder {
   color: gray;
   opacity: 0.7;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 593px;
+  max-width: 593px;
 }
 
 a button {
