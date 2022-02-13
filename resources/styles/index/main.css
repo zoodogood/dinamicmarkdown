@@ -65,5 +65,5 @@ body > a {
 body > a button {
   width: 220px;
   color: inherit;
-  margin-top: 2px;
+  margin-top: 1em;
 }
