@@ -14,4 +14,6 @@ document.body.innerHTML = "";
 const inner = new MarkdownParser(pointedContent)
   .toHTML();
 
-new Visualizer().visualize(inner);
+console.log(inner);
+
+new Visualizer(inner).visualize();
