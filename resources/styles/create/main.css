@@ -1,3 +1,7 @@
+body {
+  height: 200vh;
+}
+
 textarea {
   margin-top: 15px;
   background:
