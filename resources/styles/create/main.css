@@ -21,11 +21,6 @@ textarea::placeholder {
   opacity: 0.7;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-}
-
 a button {
   margin: auto;
   margin-top: 20px;
