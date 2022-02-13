@@ -1,12 +1,18 @@
 class Visualizer {
-  #original;
+  #originalNode;
 
   constructor(node){
-    this.node = node.cloneNode(true);
-    this.#original = node;
+    this.node = node.cloneNode(false);
+    this.#originalNode = node;
   }
 
   async visualize(){
+    const nesting = this.#getNesting();
+    this.#recreate(nesting);
+  }
+
+
+  #getNesting(){
     const nestiing = [];
 
     const parse = (node, ref) => {
@@ -25,9 +31,16 @@ class Visualizer {
       throw new Error("Unknow type");
     }
 
-    [...this.node.childNodes].forEach(node => parse(node, nestiing));
-    nestiing.node = this.node;
+    [...this.#originalNode.childNodes].forEach(node => parse(node, nestiing));
+    nestiing.node = this.#originalNode;
+  }
 
-    
+
+  async #recreate(nesting){
+    const restoreNode = (node, parent) => {
+      node.classList.add("restored");
+      parent.append(node);
+    }
+
   }
 }
