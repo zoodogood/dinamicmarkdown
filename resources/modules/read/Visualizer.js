@@ -42,5 +42,8 @@ class Visualizer {
       parent.append(node);
     }
 
+    nesting
   }
+
+
 }
