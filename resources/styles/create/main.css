@@ -1,5 +1,6 @@
 textarea {
-  margin-top: 15px;
+  height: 13vw;
+  width: 90vw;
   background:
       url("../../images/textareaFon.jpg") no-repeat;
   outline: none;
@@ -95,11 +96,11 @@ a button {
   margin-top: 15px;
   padding: 0;
   list-style: none;
-  margin-left: 49px;
+  margin-left: 150px;
 }
 
 #pointedList li{
-  width: 91%;
+  width: 90%;
   clear:left;
   color: gray;
 }
