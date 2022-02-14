@@ -5,6 +5,7 @@ textarea {
   border: 1px solid #888;
   color: rgba(255,150,0,0.8);
   background-size: 100% 100%;
+  max-width: 593px;
 }
 
 textarea:hover {
@@ -131,5 +132,5 @@ a button {
 
 #bg {
   background: rgba(66,70,71,0.4);
-  margin-right: auto;
+  max-width: 600px;
 }
