@@ -1,15 +1,16 @@
 textarea {
-  background:
-      url("../../images/textareaFon.jpg") no-repeat;
+  background: url("../../images/textareaFon.jpg") no-repeat;
+  padding: 10px;
   outline: none;
   border: 1px solid #888;
   color: rgba(255,150,0,0.8);
   background-size: 100% 100%;
-  max-width: 593px;
+
+  max-width: 100vw;
 }
 
 textarea:hover {
-  background: 
+  background:
       linear-gradient(to top, rgba(0,30,36,0.7) 50%, rgba(0,1,10,0.7) 100%),
       url("../../images/textareaFon.jpg") no-repeat;
   border: 1px solid rgba(255,150,0,0.8);
