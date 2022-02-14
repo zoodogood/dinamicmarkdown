@@ -61,7 +61,3 @@ function initLink(){
 
   sections.controll.append(node);
 }
-
-let detect = new MobileDetect(window.navigator.userAgent)
-if (detect.mobile() !== null)
-  document.querySelector("textarea").style.width = "400px";
