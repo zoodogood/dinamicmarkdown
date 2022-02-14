@@ -63,5 +63,5 @@ function initLink(){
 }
 
 if (window.devicePixelRatio !== 1) {
-  document.querySelector("textarea").style.width = "300px";
+  document.querySelector("textarea").style.width = "100px";
 }
