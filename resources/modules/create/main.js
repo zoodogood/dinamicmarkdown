@@ -62,6 +62,6 @@ function initLink(){
   sections.controll.append(node);
 }
 
-if (window.devicePixelRatio !== 1) {
+let detect = new MobileDetect(window.navigator.userAgent)
+if (detect.mobile()) 
   document.querySelector("textarea").style.max_width = "300px";
-}

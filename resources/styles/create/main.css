@@ -69,7 +69,7 @@ a button {
 }
 
 #buttonCreate:hover::before {
- max-width: 593px;
+ width: 593px;
 }
 
 @keyframes checkClick {
@@ -98,11 +98,11 @@ a button {
   margin-bottom: 25px;
   padding: 0;
   list-style: none;
-  margin-left: 56px;
+  margin-left: 50px;
 }
 
 #pointedList li{
-  width: 90%;
+  width: 91%;
   clear:left;
   color: gray;
 }
