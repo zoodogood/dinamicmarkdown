@@ -5,6 +5,7 @@ textarea {
   border: 1px solid #888;
   color: rgba(255,150,0,0.8);
   background-size: 100% 100%;
+  font-size: 15px;
 }
 
 textarea:hover {
@@ -75,6 +76,7 @@ a button {
   0% {
     -webkit-box-shadow: 2px 4px 9px -5px green;
     box-shadow: 2px 4px 9px -5px green;
+    color: green;
   }
   50% {
     -webkit-box-shadow: 2px 4px 19px -5px green;
@@ -87,6 +89,7 @@ a button {
   100% {
     -webkit-box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
     box-shadow: 2px 4px 9px -5px rgba(255,150,0,0.8);
+    color: rgba(255,150,0,0.8);
   }
 }
 
@@ -95,7 +98,7 @@ a button {
   margin-bottom: 25px;
   padding: 0;
   list-style: none;
-  margin-left: 105px;
+  margin-left: 56px;
 }
 
 #pointedList li{
