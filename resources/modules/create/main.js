@@ -64,4 +64,4 @@ function initLink(){
 
 let detect = new MobileDetect(window.navigator.userAgent)
 if (detect.mobile() !== null)
-  document.querySelector("textarea").style.width = "340px";
+  document.querySelector("textarea").style.width = "400px";
