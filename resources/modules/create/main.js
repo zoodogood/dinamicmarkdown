@@ -61,3 +61,7 @@ function initLink(){
 
   sections.controll.append(node);
 }
+
+if (window.devicePixelRatio !== 1) {
+  document.querySelector("textarea").style.width = "300px";
+}
