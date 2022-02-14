@@ -32,7 +32,7 @@ a button {
 }
 
 #buttonCreate {
- width: 100%;
+ max-width: 593px;
  padding: 15px 25px;
  border: unset;
  z-index: 1;
@@ -69,7 +69,7 @@ a button {
 }
 
 #buttonCreate:hover::before {
- width: 100%;
+ max-width: 593px;
 }
 
 @keyframes checkClick {
