@@ -63,5 +63,5 @@ function initLink(){
 }
 
 let detect = new MobileDetect(window.navigator.userAgent)
-if (detect.mobile()) 
-  document.querySelector("textarea").style.width = "300px";
+if (detect.mobile() !== null)
+  document.querySelector("#bg").style.max_width = "300px";
