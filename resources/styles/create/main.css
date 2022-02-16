@@ -5,8 +5,7 @@ textarea {
   border: 1px solid #888;
   color: rgba(255,150,0,0.8);
   background-size: 100% 100%;
-
-  max-width: 100vw;
+  max-width: 99vw;
 }
 
 textarea:hover {
@@ -33,7 +32,7 @@ a button {
 }
 
 #buttonCreate {
- max-width: 593px;
+ max-width: 99vw;
  padding: 15px 25px;
  border: unset;
  z-index: 1;
@@ -70,7 +69,7 @@ a button {
 }
 
 #buttonCreate:hover::before {
- width: 593px;
+ width: 99vw;
 }
 
 @keyframes checkClick {
@@ -99,11 +98,9 @@ a button {
   margin-bottom: 25px;
   padding: 0;
   list-style: none;
-  margin-left: 50px;
 }
 
 #pointedList li{
-  width: 91%;
   clear:left;
   color: gray;
 }
@@ -119,14 +116,11 @@ a button {
 
 #pointedList li:hover span {
   color: rgba(255,150,0,0.8);
+  width: 50vw;
   cursor: default;
   border-radius: 0;
   background: #212121 no-repeat;
-  min-width: 100%;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  transform: scale(1.2);
+  opacity: 0.8;
   -webkit-box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
   box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
 }

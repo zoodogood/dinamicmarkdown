@@ -82,6 +82,9 @@ textarea {
 .hasSuperBorder {
   --color: #3992e6;
   position: relative;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
 }
 
 .hasSuperBorder::before, .hasSuperBorder::after {
@@ -120,20 +123,9 @@ textarea {
 }
 
 .hasSuperBorder:hover {
-  animation: ButtonScale 5s;
-  animation-fill-mode:forwards
-}
-
-@keyframes ButtonScale {
-  0% {
-    width: 220px;
-  }
-  100% {
-    transform: scale(1.5);
-    box-shadow: 0px 15px 27px -10px rgba(0, 0, 0, 0.77);
-    border-radius: 5px;
-
-  }
+  transform: scale(1.2);
+  border-radius: 5px;
+  box-shadow: 0px 15px 27px -10px rgba(0, 0, 0, 0.77);
 }
 
 .no-visible {
