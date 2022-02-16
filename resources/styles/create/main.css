@@ -115,8 +115,8 @@ a button {
 }
 
 #pointedList li:hover span {
+  width: 100%;
   color: rgba(255,150,0,0.8);
-  width: 50vw;
   cursor: default;
   border-radius: 0;
   background: #212121 no-repeat;
