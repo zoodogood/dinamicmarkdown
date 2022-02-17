@@ -16,7 +16,7 @@
 
   animation: BackgroundAnimated 45s linear infinite;
 
-  background: url("../../images/header.jpg");
+  background: url("../../images/headerBlue.jpg");
 }
 
 @keyframes BackgroundAnimated {
@@ -37,7 +37,7 @@
     color: #337AB7;
     line-height: 1.2;
     font-weight: bold;
-    transition: all 0.9s ease-in-out; 
+    transition: all 1s ease-in-out; 
     position: relative;
     text-transform: uppercase;
     top: 0px;
@@ -47,7 +47,7 @@
 }
 
 .hover-letter span:hover {
-    text-shadow: -8px 8px 0 rgba(0,0,0, 0.2); 
+    text-shadow: -8px 8px 2em rgba(0,0,0, 0.2); 
     color: #000;
     top: -8px;
     left: 8px;
