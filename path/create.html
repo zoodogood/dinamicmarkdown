@@ -9,23 +9,35 @@
     <link rel="stylesheet" href="resources/styles/style.css">
     <link rel="stylesheet" href="resources/styles/create/main.css">
   </head>
-
-  <body>
-      <main id="bg">
-        <section id = "plainText">
-          <textarea placeholder = "Чистый текст" name = "name" rows = "8" cols = "80"></textarea>
-          <button id = "buttonCreate" class = "buttonOpen">Click me</button>
-        </section>
-        <section id = "textControll">
-          <ul id = "pointedList">
-            <li><span>%p(ms) — пауза</span></li>
-            <li><span>%c — очистить текст</span></li>
-            <li><span>Вы можете использовать Markdown</span></li>
-          </ul>
-          <textarea disabled placeholder = "Настройка текста" name = "name" rows = "8" cols = "80"></textarea>
-          <button class = "buttonVisual" id = "buttonCreate">Сохранить визуализацию в локальное хранилище</button>
-        </section>
-      </main>
+  <body  class = "area">
+    <ul class = "circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <main id="bg">
+      <section id = "plainText">
+        <textarea placeholder = "Чистый текст" name = "name" rows = "8" cols = "80"></textarea>
+        <button id = "buttonCreate" class = "buttonOpen">Click me</button>
+      </section>
+      <section id = "textControll">
+        <ul id = "pointedList">
+          <li><span>%p(ms) — пауза</span></li>
+          <li><span>%c — очистить текст</span></li>
+          <li><span>Вы можете использовать Markdown</span></li>
+        </ul>
+        <textarea disabled placeholder = "Настройка текста" name = "name" rows = "8" cols = "80">
+        </textarea>
+        <button class = "buttonVisual" id = "buttonCreate">Сохранить визуализацию в локальное хранилище</button>
+      </section>
+    </main>
   </body>
   <script src="resources/modules/create/main.js" charset="utf-8"></script>
 </html>

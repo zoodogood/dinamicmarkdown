@@ -1,17 +1,16 @@
 textarea {
-  background: url("../../images/textareaFon.jpg") no-repeat;
   padding: 10px;
   outline: none;
+  background: linear-gradient(to top, rgba(0,30,36,0.2) 50%, rgba(0,1,10,0.2) 100%);
   border: 1px solid #888;
   color: rgba(255,150,0,0.8);
   background-size: 100% 100%;
   max-width: 99vw;
+
 }
 
 textarea:hover {
-  background:
-      linear-gradient(to top, rgba(0,30,36,0.7) 50%, rgba(0,1,10,0.7) 100%),
-      url("../../images/textareaFon.jpg") no-repeat;
+  background: linear-gradient(to top, rgba(0,30,36,0.3) 50%, rgba(0,1,10,0.3) 100%);
   border: 1px solid rgba(255,150,0,0.8);
   background-size: 100% 100%;
 }
@@ -19,6 +18,19 @@ textarea:hover {
 textarea::placeholder {
   color: gray;
   opacity: 0.7;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
 }
 
 section {
