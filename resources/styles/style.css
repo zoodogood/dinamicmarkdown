@@ -29,9 +29,9 @@ button {
 
 a {
   text-decoration: none;
-  color: #0f7afc;
+  color: rgba(255,150,0,0.8);
   border-bottom: 1px solid;
-  border-bottom-color: rgba(15, 122, 252, 0.2);
+  border-bottom-color: rgba(255,150,0,0.2);
 }
 
 
@@ -83,7 +83,7 @@ textarea {
 }
 
 .hasSuperBorder {
-  --color: #3992e6;
+  --color: rgba(255,150,0,0.5);
   position: relative;
   -moz-transition: all 1s linear;
   -o-transition: all 1s linear;
