@@ -32,6 +32,7 @@
     position: relative;
     text-align: center;
 }
+
 .hover-letter span {
     color: #337AB7;
     line-height: 1.2;
@@ -44,6 +45,7 @@
     cursor: default;
     z-index: 1; 
 }
+
 .hover-letter span:hover {
     text-shadow: -8px 8px 0 rgba(0,0,0, 0.2); 
     color: #000;
@@ -51,6 +53,7 @@
     left: 8px;
     z-index: 2; 
 }
+
 @media screen and (max-width: 767px) {
     .hover-letter span {
         font-size: 28px;

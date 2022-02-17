@@ -11,7 +11,6 @@ body > section {
   user-select: text;
   background: white;
   min-height: 90vh;
-
   padding: 5vh;
 }
 
@@ -24,6 +23,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+a {
+  border: none;
+}
 
 button {
  position: relative;
@@ -32,8 +34,11 @@ button {
  text-decoration: none;
  text-transform: uppercase;
  overflow: hidden;
- border-radius: 40px;
- border: none;
+ border-radius: 50px;
+ border-bottom: 5px solid black;
+ -moz-transition: all 1s linear;
+ -o-transition: all 1s linear;
+ -webkit-transition: all 1s linear;
 }
 
 button span {
@@ -50,9 +55,9 @@ button .liquid {
  left: 0;
  width: 100%;
  height: 200px;
- background: #4973ff;
- box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
- transition: .5s;
+ background: rgba(255,150,0,1);
+ box-shadow: inset 0 0 50px #4973ff;
+ transition: 0.5s;
 }
 
 button .liquid::after,
@@ -76,13 +81,18 @@ button .liquid::before {
 
 button .liquid::after {
  border-radius: 40%;
- background: rgba(20, 20, 20, .5);
+ background: rgba(20, 20, 20, 0.5);
  animation: animate 10s linear infinite;
  contain: size paint;
 }
 
 button:hover .liquid {
  top: -120px;
+}
+
+button:hover {
+  transform: scale(1.2);
+  border-bottom: 0px solid black;
 }
 
 @keyframes animate {
