@@ -3,7 +3,7 @@ textarea {
   outline: none;
   background: linear-gradient(to top, rgba(0,30,36,0.2) 50%, rgba(0,1,10,0.2) 100%);
   border: 1px solid #888;
-  color: rgba(255,150,0,0.8);
+  color: rgba(255, 150, 0, 0.5);
   background-size: 100% 100%;
   max-width: 99vw;
 
@@ -11,7 +11,7 @@ textarea {
 
 textarea:hover {
   background: linear-gradient(to top, rgba(0,30,36,0.3) 50%, rgba(0,1,10,0.3) 100%);
-  border: 1px solid rgba(255,150,0,0.8);
+  border: 1px solid rgba(255, 150, 0, 0.5);
   background-size: 100% 100%;
 }
 
