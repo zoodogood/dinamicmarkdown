@@ -13,7 +13,7 @@ class Visualizer {
 
 
   #getNesting(){
-    const nestiing = [];
+    const nesting = [];
 
     const parse = (node, ref) => {
 
@@ -21,18 +21,19 @@ class Visualizer {
         return ref.push(node.textContent);
 
       if (node.nodeType === 1){
-        const nestiing = [];
-        ref.push(nestiing);
-        nestiing.node = node;
-        [...node.childNodes].forEach(node => parse(node, nestiing));
+        const nesting = [];
+        ref.push(nesting);
+        nesting.node = node;
+        [...node.childNodes].forEach(node => parse(node, nesting));
         return;
       }
 
       throw new Error("Unknow type");
     }
 
-    [...this.#originalNode.childNodes].forEach(node => parse(node, nestiing));
-    nestiing.node = this.#originalNode;
+    [...this.#originalNode.childNodes].forEach(node => parse(node, nesting));
+    nesting.node = this.#originalNode;
+    return nesting;
   }
 
 
@@ -42,7 +43,8 @@ class Visualizer {
       parent.append(node);
     }
 
-    nesting
+
+    
   }
 
 
