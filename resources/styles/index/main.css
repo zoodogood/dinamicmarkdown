@@ -17,7 +17,6 @@
   animation: BackgroundAnimated 45s linear infinite;
 
   background: url("../../images/headerBlue.jpg");
-  background-size: 100vw 200%;
 }
 
 @keyframes BackgroundAnimated {
@@ -30,35 +29,35 @@
 }
 
 .hover-letter {
-  position: relative;
-  text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .hover-letter span {
-  color: #337AB7;
-  line-height: 1.2;
-  font-weight: bold;
-  transition: all 1s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
-  top: 0px;
-  left: 0px;
-  cursor: default;
-  z-index: 1;
+    color: #337AB7;
+    line-height: 1.2;
+    font-weight: bold;
+    transition: all 1s ease-in-out; 
+    position: relative;
+    text-transform: uppercase;
+    top: 0px;
+    left: 0px;
+    cursor: default;
+    z-index: 1; 
 }
 
 .hover-letter span:hover {
-  text-shadow: -8px 8px 2em rgba(0,0,0, 0.2);
-  color: #000;
-  top: -8px;
-  left: 8px;
-  z-index: 2;
+    text-shadow: -8px 8px 2em rgba(0,0,0, 0.2); 
+    color: #000;
+    top: -8px;
+    left: 8px;
+    z-index: 2; 
 }
 
 @media screen and (max-width: 767px) {
-  .hover-letter span {
-      font-size: 28px;
-  }
+    .hover-letter span {
+        font-size: 28px;
+    }
 }
 
 body > a {
