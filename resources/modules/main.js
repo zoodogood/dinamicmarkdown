@@ -12,17 +12,23 @@ let randIndex = Math.floor( Math.random() * (Object.keys( coords ).length) ); //
 let height = coords[ coordsKeys[ randIndex ] ][ 0 ]
 let side = coords[ coordsKeys[ randIndex ] ][ 1 ]
 
-$('.hasSuperBorder').hover(function() {
+$('.hasSuperBorder').hover(
+	() => {
+		$('.hasSuperBorder:hover').css('text-shadow',`rgba( 255, 150, 0,1) ${height} ${side} 0`)
 
-	$('.hasSuperBorder:hover').css('text-shadow',`rgba( 255, 150, 0,1) ${height} ${side} 0`)
+		//обновление переменных
+		randIndex = Math.floor( Math.random() * (Object.keys( coords ).length) );
+		height = coords[ coordsKeys[ randIndex ] ][ 0 ]
+		side = coords[ coordsKeys[ randIndex ] ][ 1 ]
+	},
+	() => {
+		$('.hasSuperBorder').css('text-shadow','none')
+	}
+)
 
-	//обновление переменных
-	randIndex = Math.floor( Math.random() * (Object.keys( coords ).length) );
-	height = coords[ coordsKeys[ randIndex ] ][ 0 ]
-	side = coords[ coordsKeys[ randIndex ] ][ 1 ]
 
-}, function() {
-
-	$('.hasSuperBorder').css('text-shadow','none')
-	
-})
+// На момент инициализации скрипта кнопки .hasSuperBorder не существует. Вообще.
+console.log( $('.hasSuperBorder') );
+console.log(
+	document.querySelector('.hasSuperBorder')
+);
