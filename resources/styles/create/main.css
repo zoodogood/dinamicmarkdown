@@ -132,9 +132,3 @@ a button {
   max-width: 593px;
   backdrop-filter: blur(20px);
 }
-
-#home {
-  position: absolute;
-  margin-top: 0;
-  margin-left: 30vw;
-}

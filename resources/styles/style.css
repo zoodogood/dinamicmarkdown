@@ -34,10 +34,11 @@ a {
   border-bottom-color: rgba(255,150,0,0.2);
 }
 
-a #home {
-  position: absolute;
-  margin-top: 0;
-  margin-left: 30vw;
+#home {
+  margin-top: 10px;
+  margin-right: auto;
+  border-radius: 100px;
+  border-bottom: 0px;
 }
 
 header {

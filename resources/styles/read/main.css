@@ -27,7 +27,7 @@ a {
   border: none;
 }
 
-button {
+#empty{
  position: relative;
  padding: 19px 36px;
  display: block;
@@ -41,7 +41,7 @@ button {
  -webkit-transition: all 1s linear;
 }
 
-button span {
+#empty span {
  position: relative;
  color: #fff;
  font-family: Arial;
@@ -90,7 +90,7 @@ button:hover .liquid {
  top: -120px;
 }
 
-button:hover {
+#empty:hover {
   transform: scale(1.2);
   border-bottom: 0px solid black;
   text-shadow: rgba(255, 244, 0, 0.3) 3px 0 0;
