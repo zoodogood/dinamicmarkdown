@@ -30,15 +30,12 @@ button {
 a {
   text-decoration: none;
   color: rgba(255,150,0,0.8);
-  border-bottom: 1px solid;
-  border-bottom-color: rgba(255,150,0,0.2);
 }
 
 #home {
   margin-top: 10px;
   margin-right: auto;
   border-radius: 100px;
-  border-bottom: 0px;
 }
 
 header {
