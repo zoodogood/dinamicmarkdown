@@ -6,7 +6,7 @@
   text-align: center;
   font-family: 'Luckiest Guy';
   color: transparent;
-  text-shadow: rgba(255, 244, 0, 0.6) 3px 0 0;
+  text-shadow: rgba(255,255,255,0.5) 3px 0 0;
   -webkit-font-smoothing: antialiased;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -25,6 +25,7 @@
   }
   100% {
     background-position: 100vw 0;
+    text-shadow: rgba(255,244,0,0.5) 3px 0 0;
   }
 }
 

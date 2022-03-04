@@ -53,7 +53,7 @@ a button {
  left: 0;
  height: 100%;
  width: 0;
- background-color: #212121;
+ background-color: rgba(0,30,36,0.2);
  z-index: -1;
  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
@@ -120,10 +120,10 @@ a button {
   color: rgba(255,150,0,0.8);
   cursor: default;
   border-radius: 0;
-  background: #212121 no-repeat;
+  background: rgba(255,255,255,0.1) no-repeat;
   opacity: 0.8;
-  -webkit-box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
-  box-shadow: -0.5px 0 0.5px rgba(255,150,0,0.8);
+  -webkit-box-shadow: -0.5px 0 0.5px rgba(255,255,255,0.5);
+  box-shadow: -0.5px 0 0.5px rgba(255,255,255,0.5);
   text-shadow: rgba(66,70,71,0.7) 3px 0 0;
 }
 
@@ -131,4 +131,8 @@ a button {
   background: rgba(66,70,71,0.4);
   max-width: 593px;
   backdrop-filter: blur(20px);
+}
+
+.hasSuperBorder {
+  width: 50%;
 }
