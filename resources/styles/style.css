@@ -17,7 +17,7 @@ body {
 
 button {
   display: block;
-  padding: 0.7em 2em;
+  padding: 0.5em 2em;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -36,6 +36,10 @@ a {
   margin-top: 10px;
   margin-right: auto;
   border-radius: 100px;
+}
+
+#home:hover {
+  color: rgb(255, 150, 0);
 }
 
 header {

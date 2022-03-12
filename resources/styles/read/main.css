@@ -35,7 +35,6 @@ a {
  text-transform: uppercase;
  overflow: hidden;
  border-radius: 50px;
- border-bottom: 5px solid black;
  -moz-transition: all 0.2s linear;
  -o-transition: all 0.2s linear;
  -webkit-transition: all 0.2s linear;
@@ -91,7 +90,6 @@ button:hover .liquid {
 }
 
 #empty:hover {
-  border-bottom: 0px solid black;
   text-shadow: rgba(255, 244, 0, 0.3) 3px 0 0;
   box-shadow: 0px 15px 27px -13px rgba(0, 0, 0, 0.77);
 }
