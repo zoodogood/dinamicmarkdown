@@ -73,6 +73,10 @@ a button {
  width: 99vw;
 }
 
+#buttonCreate:focus {
+  animation: checkClick 1s;
+}
+
 @keyframes checkClick {
   0% {
     -webkit-box-shadow: 2px 4px 9px -5px green;

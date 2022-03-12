@@ -10,8 +10,6 @@ sections.plainText.querySelector(".buttonOpen").onclick = clickEvent => {
   sections.controll.querySelector("#textControll > button")
     .style.display = "block";
 
-  document.querySelector("#buttonCreate").style.animation = "checkClick 1s";
-
   const buttonNode = sections.controll.querySelector(".buttonVisual")
 
   buttonNode.onclick = clickEvent => {
@@ -40,7 +38,9 @@ function placePointers( content ){
 
 function initTextarea(content){
   const node = sections.controll.querySelector("textarea");
+  const node2 = sections.controll.querySelector("button");
   node.removeAttribute("disabled");
+  node2.removeAttribute("disabled");
   node.value = placePointers( content );
 
   return node;
