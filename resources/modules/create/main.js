@@ -46,9 +46,9 @@ function initTextarea(content){
   return node;
 }
 
-
+let count = 0
 function initLink(){
-
+  if ( count == 0 ) {
   const node = document.createElement("a");
   const button = document.createElement("button");
 
@@ -60,4 +60,8 @@ function initLink(){
   node.append(button);
 
   sections.controll.append(node);
+
+  count += 1
+
+  }
 }
