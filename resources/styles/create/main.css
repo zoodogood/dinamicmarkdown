@@ -8,10 +8,14 @@ textarea {
   max-width: 99vw;
 }
 
-textarea:hover {
+textarea:hover:not([disabled]) {
   background: linear-gradient(to top, rgba(0,30,36,0.3) 50%, rgba(0,1,10,0.3) 100%);
   border: 1px solid rgba(0, 141, 210, 0.8);
   background-size: 100% 100%;
+}
+
+textarea[disabled] {
+  filter: brightness(0.4);
 }
 
 textarea::placeholder {
@@ -62,14 +66,14 @@ a button {
  -webkit-transition: all 1s linear;
 }
 
-#buttonCreate:hover {
+#buttonCreate:hover:not([disabled]) {
  color: rgba(0, 141, 210, 0.8);
  -webkit-box-shadow: -0.8px 4px 9px -5px rgba(0, 141, 210, 0.8);
  box-shadow: -0.8px 4px 9px -5px rgba(0, 141, 210, 0.8);
  text-shadow: rgba(66,70,71,0.7) 3px 0 0;
 }
 
-#buttonCreate:hover::before {
+#buttonCreate:hover:not([disabled])::before {
  width: 99vw;
 }
 
@@ -78,7 +82,8 @@ a button {
 }
 
 #buttonCreate[disabled] {
-  color: gray;
+  filter: brightness(0.4);
+  cursor: default;
 }
 
 @keyframes checkClick {
