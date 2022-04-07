@@ -104,9 +104,8 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .hasSuperBorder {
-  background-image: linear-gradient(to right, #5545d6, #7f228c, #908df5, #e43d3c);
+  background: transparent;
   --color: rgba(255,255,255,0.5);
-  box-shadow: 0 4px 15px 0 rgba(123, 45, 160, 0.75);
   position: relative;
   moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
@@ -115,6 +114,12 @@ textarea::-webkit-scrollbar-thumb {
   width: 40vw;
   height: 45px;
   border-radius: 5px;
+  font-size: 20px;
+  padding-bottom: 8px;
+  text-align: center;
+  color: rgba(100,200,255);
+  text-shadow: -1px 2px 0px rgba(0, 150, 150, 1);
+  font-family: fantasy;
 }
 
 .hasSuperBorder::before, .hasSuperBorder::after {
@@ -123,7 +128,6 @@ textarea::-webkit-scrollbar-thumb {
   width: 30px;
   height: 30px;
   background: transparent;
-
   z-index: -5;
   transition: 0.5s;
 }
@@ -153,6 +157,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .hasSuperBorder:hover {
+  background: rgba(255,255,255,0.3);
   background-position: 100% 0;
   moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
@@ -188,6 +193,7 @@ textarea::-webkit-scrollbar-thumb {
     width: 20px;
     height: 20px;
     opacity: 20%;
+    border-radius: 100%;
     background: rgba(0, 141, 210, 0.3);
     animation: animate 25s linear infinite;
     bottom: -150px;
@@ -285,7 +291,6 @@ textarea::-webkit-scrollbar-thumb {
   0% {
     transform: translateY(0);
     opacity: 0.5;
-    border-radius: 100%;
   }
   100% {
     transform: translateY(-1000px);
