@@ -169,6 +169,12 @@ textarea::-webkit-scrollbar-thumb {
   outline: none;
 }
 
+@media (max-width: 480px) { 
+  .hasSuperBorder {
+    font-size: 10px;
+  }
+}
+
 .area {
     background: #4e54c8;
     background: linear-gradient(231deg, rgba(0,30,36,1) 50%, rgba(0,1,10,1) 100%) no-repeat;
