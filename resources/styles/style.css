@@ -171,7 +171,7 @@ textarea::-webkit-scrollbar-thumb {
 
 @media (max-width: 480px) { 
   .hasSuperBorder {
-    font-size: 10px;
+    font-size: 90%;
   }
 }
 
