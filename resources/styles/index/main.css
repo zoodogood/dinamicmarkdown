@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@1000&display=swap');
+
 #title_header {
   background-repeat: repeat-x;
   background-position: 0 0;
   font-size: 8vw;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Luckiest Guy';
-  color: transparent;
-  text-shadow: rgba(255,255,255,0.5) 3px 0 0;
+  font-family: 'Cinzel';
+  text-shadow: rgba(0,0,50, 0.5) 3px 0 0;
   -webkit-font-smoothing: antialiased;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 0;
 
   animation: BackgroundAnimated 45s linear infinite;
@@ -25,7 +25,6 @@
   }
   100% {
     background-position: 100vw 0;
-    text-shadow: rgba(255,244,0,0.5) 3px 0 0;
   }
 }
 
@@ -35,10 +34,10 @@
 }
 
 .hover-letter span {
-    color: #337AB7;
+    color: rgba(255,255,255, 0.5);
     line-height: 1.2;
     font-weight: bold;
-    transition: all 1s ease-in-out; 
+    transition: all 0.2s ease-in-out; 
     position: relative;
     text-transform: uppercase;
     top: 0px;
@@ -48,11 +47,11 @@
 }
 
 .hover-letter span:hover {
-    text-shadow: -8px 8px 2em rgba(0,0,0, 0.2); 
-    color: #000;
+    text-shadow: -8px 8px 2em rgba(0,0,0, 0.2) 2px; 
+    color: rgba(100,255,100,0.5);
     top: -8px;
     left: 8px;
-    z-index: 2; 
+    z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
