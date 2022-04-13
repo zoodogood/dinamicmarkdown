@@ -109,17 +109,17 @@ a button {
 
 #pointedList {
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   padding: 0;
   list-style: none;
 }
 
-#pointedList li{
+#pointedList li {
   clear:left;
   color: gray;
 }
 
-#pointedList li span{
+#pointedList li span {
   display: block;
   float: left;
   min-width: 0px;
@@ -138,6 +138,30 @@ a button {
   -webkit-box-shadow: -0.5px 0 0.5px rgba(255,255,255,0.5);
   box-shadow: -0.5px 0 0.5px rgba(255,255,255,0.5);
   text-shadow: rgba(66,70,71,0.4) 3px 0 0;
+}
+
+#helpButtons {
+  color: white;
+  padding-bottom: 8px;
+  margin: auto;
+}
+
+#helpButtons li {
+  font-size: 20px;
+  display: inline;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#helpButtons li span {
+  background: rgba(255,255,255,0.2);
+  padding: 5px;
+  border-radius: 20%;
+}
+
+#helpButtons li:hover span {
+  background: rgba(0, 141, 210, 0.5);
+  box-shadow: 8px 4px 9px -5px black;
 }
 
 #bg {

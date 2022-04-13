@@ -34,6 +34,20 @@ function placePointers( content ){
   return content;
 }
 
+const content = sections.controll.querySelector("textarea");
+
+document.getElementById("firstButton").onclick = clickEvent => {
+  content.value += "%p(350)";
+}
+document.getElementById("secondButton").onclick = clickEvent => {
+  content.value += "%p(500)";
+}
+document.getElementById("threeButton").onclick = clickEvent => {
+  content.value += "%p(800)";
+}
+document.getElementById("fourButton").onclick = clickEvent => {
+  content.value += "%p(1050)";
+}
 
 
 function initTextarea(content){
