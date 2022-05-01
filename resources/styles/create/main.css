@@ -141,12 +141,13 @@ a button {
 }
 
 #helpButtons {
-  color: white;
+  color: gray;
   padding-bottom: 8px;
   margin: auto;
 }
 
 #helpButtons li {
+  color: white;
   font-size: 20px;
   display: inline;
   white-space: nowrap;
@@ -162,6 +163,32 @@ a button {
 #helpButtons li:hover span {
   background: rgba(0, 141, 210, 0.5);
   box-shadow: 8px 4px 9px -5px black;
+}
+
+#helpButtons #fiveButton span {
+  background: rgba(255,0,0,0.5);
+  position: absolute;
+  right: 3%;
+  top: 68%;
+  opacity: 0.1;
+  font-family: sans-serif;
+}
+
+#helpButtons #fiveButton span:hover {
+  opacity: 1;
+}
+
+#helpButtons #sixButton span {
+  background: rgba(255,0,0,0.5);
+  position: absolute;
+  right: 3%;
+  top: 1%;
+  opacity: 0.1;
+  font-family: sans-serif;
+}
+
+#helpButtons #sixButton span:hover {
+  opacity: 1;
 }
 
 #bg {
