@@ -38,20 +38,20 @@ const contentPlainText = sections.plainText.querySelector("textarea");
 const contentControll = sections.controll.querySelector("textarea");
 
 document.getElementById("firstButton").onclick = clickEvent => {
-  content.value += "%p(350)";
+  contentControll.value += "%p(350)";
 }
 document.getElementById("secondButton").onclick = clickEvent => {
-  content.value += "%p(500)";
+  contentControll.value += "%p(500)";
 }
 document.getElementById("threeButton").onclick = clickEvent => {
-  content.value += "%p(800)";
+  contentControll.value += "%p(800)";
 }
 document.getElementById("fourButton").onclick = clickEvent => {
-  content.value += "%p(1050)";
+  contentControll.value += "%p(1050)";
 }
 
 document.getElementById("fiveButton").onclick = clickEvent => {
-  content.value = '';
+  contentControll.value = '';
 }
 
 document.getElementById("sixButton").onclick = clickEvent => {
