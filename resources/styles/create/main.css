@@ -108,7 +108,7 @@ a button {
 }
 
 #pointedList {
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 5px;
   padding: 0;
   list-style: none;
@@ -167,28 +167,8 @@ a button {
 
 #helpButtons #fiveButton span {
   background: rgba(255,0,0,0.5);
-  position: absolute;
-  right: 3%;
-  top: 68%;
-  opacity: 0.1;
-  font-family: sans-serif;
-}
-
-#helpButtons #fiveButton span:hover {
   opacity: 1;
-}
-
-#helpButtons #sixButton span {
-  background: rgba(255,0,0,0.5);
-  position: absolute;
-  right: 3%;
-  top: 1%;
-  opacity: 0.1;
   font-family: sans-serif;
-}
-
-#helpButtons #sixButton span:hover {
-  opacity: 1;
 }
 
 #bg {

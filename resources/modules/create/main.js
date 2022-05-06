@@ -51,11 +51,7 @@ document.getElementById("fourButton").onclick = clickEvent => {
 }
 
 document.getElementById("fiveButton").onclick = clickEvent => {
-  contentControll.value = '';
-}
-
-document.getElementById("sixButton").onclick = clickEvent => {
-  contentPlainText.value = '';
+  //Здесь нужен код для удаления всех элементов '%p(number)'
 }
 
 
