@@ -51,7 +51,11 @@ document.getElementById("fourButton").onclick = clickEvent => {
 }
 
 document.getElementById("fiveButton").onclick = clickEvent => {
-  //Здесь нужен код для удаления всех элементов '%p(number)'
+  let values = ["350", "500", "800", "1050"]
+  for (let i = 0; i < values.length; i++) {
+    contentControll.value = contentControll.value.replace(`%p(${values[i]})`, '');
+    console.log(contentControll.value)
+  }
 }
 
 
